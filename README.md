@@ -1,5 +1,5 @@
 # Hangman Project - Ai Core
-AiCore hangman project
+
 So here's the thing - I initially had no clue how to code in Python and my R knowledge was very rusty from my uni days. I do, however,fondly recall the stress of finding where I needed to add a semi colon or remove a full stop - which this experience has brought me back to.
 But starting on Ai Core and using Solo Learn for the moments my 8 month old won't let me sit at my desktop, gave me a chance to learn Python from scratch, so here I present my first project; Hangman.
 
