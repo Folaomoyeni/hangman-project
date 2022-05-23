@@ -75,15 +75,15 @@ class Hangman:
 
 
     def __init__(self, word_list, num_lives=5):
-        self.word_list = word_list
-        self.word = random.choice(word_list)
-        self.word_guessed = ['_'] * len(self.word)
-        self.num_letters = len(set(self.word))
-        self.num_lives = num_lives
-        self.list_letters = []
+        self.word_list = word_list # word list at the bottom
+        self.word = random.choice(word_list) # selects random word from the word list
+        self.word_guessed = ['_'] * len(self.word) # whatever the length of the guessed word is mulltiplied by the dashes
+        self.num_letters = len(set(self.word)) #length of random word chosen
+        self.num_lives = num_lives #number of lives left in the game
+        self.list_letters = [] #list will be added to as letters are guessed
 
         print (f"The mystery word has {len(self.word)} characters (The number of letters is NOT the UNIQUE number of each letters)")
-        print (' '.join(self.word_guessed))
+        print (' '.join(self.word_guessed)) #add space between dashes
         # TODO 2: Initialize the attributes as indicated in the docstring
         # TODO 2: Print two message upon initialization:
         # 1. "The mystery word has {len(self.word)} characters" (The number of letters is NOT the UNIQUE number of letters)
@@ -103,17 +103,17 @@ class Hangman:
 
         '''
         if letter in self.word: 
-            for idx, let in enumerate(self.word):
+            for idx, let in enumerate(self.word): #ennumerate will gives the letters a value in the random word chosen
                 if let == letter:
-                 self.word_guessed[idx] = letter
+                 self.word_guessed[idx] = letter #replaces indexed letter in word with guessed letter if they are the same
             self.num_letters -=1
-            print (f"Well done, {letter} is correct!")
-            print (' '.join(self.word_guessed))
+            print (f"Well done, {letter} is correct!") #f is to format variable in the {} brackets.
+            print (' '.join(self.word_guessed)) # prints guessed word again with spaces and now letters that have been found
         else:
-            self.num_lives -=1
-            print(Graphics[int(self.num_lives)])
-            print(f'Sorry, {letter} is not in the word.') 
-            print(f'You have {self.num_lives} lives left.')
+            self.num_lives -=1 #takes a life away from the last number it was
+            print(Graphics[int(self.num_lives)]) # print coresponding graphic to the number of lives
+            print(f'Sorry, {letter} is not in the word.') #letter guessed is not in the word
+            print(f'You have {self.num_lives} lives left.') #let's user know how many lives are left
 
         # TODO 3: Check if the letter is in the word. TIP: You can use the lower() method to convert the letter to lowercase
         # TODO 3: If the letter is in the word, replace the '_' in the word_guessed list with the letter
