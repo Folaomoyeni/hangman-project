@@ -35,7 +35,7 @@ The prints have to contain the same text as indicated, don't add any more prints
 or you will get 0 for this assignment.
 '''
 import random
-#from tkinter import E
+
 
 class Hangman:
     '''
@@ -82,7 +82,7 @@ class Hangman:
         self.num_lives = num_lives
         self.list_letters = []
 
-        print (f"The mystery word has {len(self.word)} characters (The number of letters is NOT the UNIQUE number of letters)")
+        print (f"The mystery word has {len(self.word)} characters (The number of letters is NOT the UNIQUE number of each letters)")
         print (' '.join(self.word_guessed))
         # TODO 2: Initialize the attributes as indicated in the docstring
         # TODO 2: Print two message upon initialization:
@@ -136,14 +136,13 @@ class Hangman:
             if len(letter) > 1: 
                 print ("Please, enter just one character")
             elif letter in self.list_letters:
-                print('That\'s already been guessed')
+                print(f'{letter} has already been tried')
             else:
                 break
 
 
         self.list_letters.append(letter)
         self.check_letter(letter)
-
   
         # TODO 1: Ask the user for a letter iteratively until the user enters a valid letter
         # TODO 1: Assign the letter to a variable called `letter`
