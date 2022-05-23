@@ -1,3 +1,4 @@
+
 # Hangman Project - Ai Core
 
 So here's the thing - I initially had no clue how to code in Python and my R knowledge was very rusty from my uni days. I do, however,fondly recall the stress of finding where I needed to add a semi colon or remove a full stop - which this experience has brought me back to.
@@ -49,3 +50,5 @@ Learning how to use github has been a journey. As can be seen with the multiple 
 
 
 # Conclusions
+
+
